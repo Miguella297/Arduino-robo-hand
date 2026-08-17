@@ -1,23 +1,34 @@
 #include <Servo.h>
 
-Servo myservo;  // create servo object to control a servo
-// twelve servo objects can be created on most boards
+Servo servoA;  // pin 8 - full 180 sweep there and back, then stops
+Servo servoB;  // pin 9 - rotates 180 one-way only, then stops
 
-int pos = 0;    // variable to store the servo position
+const int servoAPin = 8;
+const int servoBPin = 9;
+
+const int stepDelay = 20;   // ms between each 1-degree step (controls "slow" speed)
 
 void setup() {
-  myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+  servoA.attach(servoAPin);
+  servoB.attach(servoBPin);
 
-  for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
-    // in steps of 1 degree
-    myservo.write(pos);              // tell servo to go to position in variable 'pos'
-    delay(15);                       // waits 15ms for the servo to reach the position
+  // --- Servo A: full sweep 0 -> 180 -> 0, then done ---
+  for (int pos = 0; pos <= 180; pos++) {
+    servoA.write(pos);
+    delay(stepDelay);
+  }
+  for (int pos = 180; pos >= 0; pos--) {
+    servoA.write(pos);
+    delay(stepDelay);
   }
 
-  myservo.detach();  // stop sending signal so servo holds still and doesn't jitter
-}            
+  // --- Servo B: single sweep 0 -> 180, then done ---
+  for (int pos = 0; pos <= 180; pos++) {
+    servoB.write(pos);
+    delay(stepDelay);
+  }
+}
 
 void loop() {
-  // intentionally empty — nothing repeats, servo stays put
+  // intentionally empty — nothing repeats
 }
- 
