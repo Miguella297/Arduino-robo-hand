@@ -21,6 +21,7 @@ void setup() {
     servoA.write(pos);
     delay(stepDelay);
   }
+  break 
 
   // --- Servo B: single sweep 0 -> 180, then done ---
   for (int pos = 0; pos <= 180; pos++) {
