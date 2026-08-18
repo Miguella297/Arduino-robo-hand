@@ -1,35 +1,40 @@
 #include <Servo.h>
 
-Servo servoA;  // pin 8 - full 180 sweep there and back, then stops
-Servo servoB;  // pin 9 - rotates 180 one-way only, then stops
+Servo servoA;
+Servo servoB;
 
 const int servoAPin = 8;
 const int servoBPin = 9;
 
-const int stepDelay = 20;   // ms between each 1-degree step (controls "slow" speed)
+const int stepDelay = 20;
 
 void setup() {
   servoA.attach(servoAPin);
-  servoB.attach(servoBPin);
+  servoA.write(0);   // immediately set starting position, no neutral snap
 
-  // --- Servo A: full sweep 0 -> 180 -> 0, then done ---
+  servoB.attach(servoBPin);
+  servoB.write(0);   // same fix here
+
+  delay(300); // brief pause to let both servos settle at 0 before moving
+
   for (int pos = 0; pos <= 180; pos++) {
     servoA.write(pos);
     delay(stepDelay);
   }
   for (int pos = 180; pos >= 0; pos--) {
     servoA.write(pos);
+    delay(stepDelay);    
+  }
+
+  for (int pos = 0; pos <= 180; pos++) {
+    servoB.write(pos);
     delay(stepDelay);
   }
-  break 
-
-  // --- Servo B: single sweep 0 -> 180, then done ---
-  for (int pos = 0; pos <= 180; pos++) {
+  for (int pos = 180; pos >= 0; pos--) {
     servoB.write(pos);
     delay(stepDelay);
   }
 }
 
 void loop() {
-  // intentionally empty — nothing repeats
 }
