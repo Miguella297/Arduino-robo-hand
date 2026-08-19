@@ -10,27 +10,29 @@ const int stepDelay = 20;
 
 void setup() {
   servoA.attach(servoAPin);
-  servoA.write(0);   // immediately set starting position, no neutral snap
+  servoA.write(90);    // starting position
 
   servoB.attach(servoBPin);
-  servoB.write(0);   // same fix here
+  servoB.write(90);    // starting position
 
-  delay(300); // brief pause to let both servos settle at 0 before moving
+  delay(300); // let both servos settle before moving
 
-  for (int pos = 0; pos <= 180; pos++) {
+  // --- Servo A: 90 -> 0 -> 90 ---
+  for (int pos = 90; pos >= 0; pos--) {
     servoA.write(pos);
     delay(stepDelay);
   }
-  for (int pos = 180; pos >= 0; pos--) {
+  for (int pos = 0; pos <= 90; pos++) {
     servoA.write(pos);
-    delay(stepDelay);    
+    delay(stepDelay);
   }
 
-  for (int pos = 0; pos <= 180; pos++) {
+  // --- Servo B: 90 -> 0 -> 90 ---
+  for (int pos = 90; pos >= 0; pos--) {
     servoB.write(pos);
     delay(stepDelay);
   }
-  for (int pos = 180; pos >= 0; pos--) {
+  for (int pos = 0; pos <= 90; pos++) {
     servoB.write(pos);
     delay(stepDelay);
   }
