@@ -5,3 +5,18 @@ A robo hand using an Arduino uno and servos
 ![Finished robotic hand](hand.png)
 
 ![Arduino wiring](wires.png)
+
+
+## Bill of Materials
+
+| Item | Quantity | Notes |
+|---|---|---|
+| Arduino Uno | 1 | Main microcontroller |
+| SG90 Servo Motor | 2 | One for wrist, one for finger |
+| Cardboard | 1 box | Hand/arm structure |
+| Popsicle sticks | ~5 | Servo horn extensions |
+| String/thread | ~1m | Finger tendon mechanism |
+| Rubber bands | ~5 | Finger return tension |
+| Hot glue | 1 stick | Mounting servos, joints |
+| Paper fasteners (brads) | ~3 | Hinge pivots |
+| Jumper wires | ~6 | Arduino-to-servo connections |
