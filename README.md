@@ -1,2 +1,7 @@
 a cardboard robotic hand built with an Arduino Uno and two servo motors, controlled by custom code you iterated on extensively (adjusting rotation angles, speed, and direction). One servo ended up moving the wrist (after the forearm proved too heavy) while the other curled 3 fingers using a string-and-rubber-band tendon mechanism, all assembled from craft materials like cardboard, popsicle sticks, and hot glue. Along the way you debugged real wiring issues (wrong header pins), a servo library quirk causing unwanted snapping, and torque limitations that forced you to redesign the mechanics rather than just tweak the code — and you wrapped it up with a GitHub repo and an hour-by-hour markdown journal documenting the roughly 12-hour build across3 days.# Arduino robo hand
 A robo hand using an Arduino uno and servos
+ ## Build Photos
+
+![Finished robotic hand](hand.png)
+
+![Arduino wiring](wires.png)
