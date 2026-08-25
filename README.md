@@ -23,9 +23,9 @@ A robo hand using an Arduino uno and servos
 
 PLEASE READ.
 --->>>
-This was my first hardware project for hc and I had not know that I was supposed to use lapse. I apologize and I shouldve known better, but I really dont want my hard 12 hours of work to go to waste.
+This was my first hardware project for hc and I had not known that I was supposed to use lapse. I apologize and I shouldve known better, but I really dont want my hard 12 hours of work to go to waste.
 
-This is what I wanted to justify before submitting again
+This is allI wanted to justify before submitting again.
 
 
-If there are any other problems, please dm me on slack at @Michael maguel boi 
+If there are any other problems, please dm me on slack @Michael maguel boi 
