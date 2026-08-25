@@ -20,3 +20,14 @@ A robo hand using an Arduino uno and servos
 | Hot glue | 1 stick | Mounting servos, joints |
 | Paper fasteners (brads) | ~3 | Hinge pivots |
 | Jumper wires | ~6 | Arduino-to-servo connections |
+
+PLEASE READ.
+--->>>
+This was my first hardware project for hc and I had not know that I was supposed to use lapse. I apologize and I shouldve known better, but I really dont want my hard 12 hours of work to go to waste.
+
+I as well do not have any software work done for the hand diagram as it was made out of cardboard and not 3d printed.
+
+These justify the 2 things I understand I am missing before submissions.
+
+
+If there are any other problems, please dm me on slack at @Michael maguel boi
